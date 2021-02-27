@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+"discord.py" = "*"
+google-images-search = "*"
+pynacl = "*"
+youtube-search-python = "*"
+
+[dev-packages]
+windows-curses = "*"
+
+[requires]
+python_version = "3.9"
