@@ -20,7 +20,7 @@ class intercepts(commands.Cog):
             ctx = await self.bot.get_context(message)
             try:
                 # wait for notsobot to respond
-                msg = await self.bot.wait_for('message', check=lambda message: message.author.id == NotSoBot_id, timeout=5)
+                msg = await self.bot.wait_for('message', check=lambda message: message.author.id == int(NotSoBot_id), timeout=10)
             # not so bot didnt respond
             except TimeoutError:
                 # notify user
