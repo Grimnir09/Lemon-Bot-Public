@@ -20,13 +20,27 @@ class intercepts(commands.Cog):
             ctx = await self.bot.get_context(message)
             try:
                 # wait for notsobot to respond
-                msg = await self.bot.wait_for('message', check=lambda message: message.author.id == int(NotSoBot_id), timeout=10)
+                msg = await self.bot.wait_for('message', check=lambda message: message.author.id == int(NotSoBot_id), timeout=5)
             # not so bot didnt respond
             except TimeoutError:
                 # notify user
                 await ctx.send(":no_entry: No Response from NotSoBot, invoking command.")
                 # invoke command, use split to remove command from content.
                 await ctx.invoke(self.bot.get_command('img'), arg=ctx.message.content.split(' ', 1)[1])
+                return
+
+        if message.content.startswith('.yt'):
+            # get the context of the message
+            ctx = await self.bot.get_context(message)
+            try:
+                # wait for notsobot to respond
+                msg = await self.bot.wait_for('message', check=lambda message: message.author.id == int(NotSoBot_id), timeout=5)
+            # not so bot didnt respond
+            except TimeoutError:
+                # notify user
+                await ctx.send(":no_entry: No Response from NotSoBot, invoking command.")
+                # invoke command, use split to remove command from content.
+                await ctx.invoke(self.bot.get_command('yt'), arg=ctx.message.content.split(' ', 1)[1])
                 return
 
 

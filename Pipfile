@@ -8,6 +8,7 @@ name = "pypi"
 google-images-search = "*"
 pynacl = "*"
 youtube-search-python = "*"
+Pillow = ">=8.1.1"
 
 [dev-packages]
 windows-curses = "*"
