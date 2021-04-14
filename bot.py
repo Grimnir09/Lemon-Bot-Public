@@ -17,6 +17,7 @@ try:
     bot.load_extension('cogs.youtube_search')
     #not really nessesary extentions comment them out if needed.
     bot.load_extension('cogs.intercepts')
+    bot.load_extension('cogs.games')
 except commands.errors.ExtensionNotFound as e:
     print(f'No Cog named: {e.name}')
 
